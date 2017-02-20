@@ -17,6 +17,8 @@
         
         $apple['weight'] = "10oz";  
         $tracks = array(
+            //'question' => 'ACTUAL QUESTION', 'answer' => 'ANSWER, 'choices' => 'THIS WOULD BE AN ARRAY OF POSSIBLE ANSWERS'
+            //Use round 2 to 
             100=>array('name' => 'Night Whitches', 'artist'=>'Sabaton', 'album'=>'Tenthousand Men'),
             array('name' => 'Fist in the Air', 'artist'=>'Five Finger', 'album'=>'kicking ass', 'album'=>'Bum Touchers'),
         );
