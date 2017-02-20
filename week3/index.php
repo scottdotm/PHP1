@@ -27,15 +27,17 @@
           if (isset($_POST['submit'])) {
                $str = $_POST['para'];
                $words = explode(" ", $str);
-               $sentences = explode(".", $str);
+               $makePeriod = array("!", "?");
+               $add = str_replace($makePeriod, ".", $str);
+               $sentences = explode(".", $add);
                $vowelWords;
-               $replace = array(",", ".", "-", "(", ")", "'", "!", "?", "\"");
-               $strFormated = str_replace($replace, "", $str);
+               $replace = array(",", "-", "(", ")", "'", "\"");
+               $strFormated = str_replace($replace, "", $add);
                $strL = strlen($str);
-               
-               $t=explode(" ", $strFormated);
-               sort($t);
-               
+
+               $t = explode(" ", $strFormated);
+               asort($t);
+
                //Words - Characters - Vowel Words
                foreach ($words as $i => $word) {
                     //Vowel Words
@@ -55,65 +57,82 @@
 
           <div class="container">
                <div class="jumbotron">
-               <div class="row">
-               <h1 class="text-center">Formatification</h1>
-               </div>
-               <form method='post' name="form1" id="form1" action="">
-                    <div class="form-group">
-                         <label for="para">Paragraph:</label>
-                         <textarea class="form-control" rows="5" name="para" id="para"></textarea>
+                    <div class="row">
+                         <h1 class="text-center">Formatification</h1>
                     </div>
-                    <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
-               </form>
+                    <form method='post' name="form1" id="form1" action="">
+                         <div class="form-group">
+                              <label for="para">Paragraph:</label>
+                              <textarea class="form-control" rows="5" name="para" id="para" ></textarea>
+
+                         </div>
+                         <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
+                    </form>
                </div>
 
-               
+
                <div class="row">
-               <table class="table">
-                    <thead class="thead-inverse">
-                         <tr>
-                              <th>Sentence Count</th>
-                              <th>Word Count</th>
-                              <th>Last Name</th>
-                              <th>Character Count</th>
-                         </tr>
-                    </thead>
-                    <tbody>
-                         <tr>
-                              <td><?= $sentCount ?></td>
-                              <td><?= $wordCounter ?></td>
-                              <td><?= $strL ?></td>
-                              <td><?= $vowelCounter ?></td>
-                         </tr>
-                    </tbody>
-               </table>
+                    <table class="table">
+                         <thead class="thead-inverse table-bordered">
+                              <tr>
+                                   <th>Sentence Count</th>
+                                   <th>Word Count</th>
+                                   <th>Character Count</th>
+                                   <th>Words that start with a Vowel Count</th>
+                              </tr>
+                         </thead>
+                         <tbody>
+                              <tr>
+                                   <td><?= $sentCount ?></td>
+                                   <td><?= $wordCounter ?></td>
+                                   <td><?= $strL ?></td>
+                                   <td><?= $vowelCounter ?></td>
+                              </tr>
+                         </tbody>
+                    </table>
                </div>
                <div class="row ">
-               <table class="table">
-                    <thead class="thead-inverse">
-                         <tr>
-                              <th>
-                                   Lastly, lookup a string modifier to remove all punctuation and then output every word
-                                   in alphabetical order.
-                              </th>
-                         </tr>
-                    </thead>
-                    <tbody>
-                         <tr>
-                              <td>
-                                   <div class="container">
-                                   <?PHP
-                                   if (isset($_POST['submit'])) {
-                                        foreach ($t as $key => $val) {
-                                             echo " ".$val;
-                                        }
-                                   }
-                                   ?>
-                                   </div>
-                              </td>
-                         </tr>
-                    </tbody>
-               </table>
+                    <table class="table">
+                         <thead class="thead-inverse table-bordered">
+                              <tr>
+                                   <th>
+                                        Lastly, lookup a string modifier to remove all punctuation and then output every word
+                                        in alphabetical order.
+                                   </th>
+                              </tr>
+                         </thead>
+                         <tbody>
+                              <tr>
+                                   <td>
+                                        <div class="container">
+                                             <?PHP
+                                             if (isset($_POST['submit'])) {
+                                                  foreach ($t as $key => $val) {
+                                                       echo " " . $val;
+                                                  }
+                                             }
+                                             ?>
+                                        </div>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td class="table-inverse">
+                                        Original Paragraph
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        <div class="container">
+                                             <?PHP
+                                             if (isset($_POST['submit'])) {
+                                                  echo $strFormated;
+                                             }
+                                             ?>
+                                        </div>
+                                   </td>
+                              </tr>
+                         </tbody>
+                    </table>
                </div>
           </div>
 
