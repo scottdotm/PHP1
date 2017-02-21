@@ -7,60 +7,37 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <title>Class Room 2/20/2017</title>
     </head>
     <body>
-        <?php
-        //our server defaults to display errors
-        //error_reporting(0); //hide all errors
-        error_reporting(E_ALL);//show all errors
-        ini_set('display_errors','1');//show/hide errors from browser, production only
-        
-        //Syntax errors-error is BEFORE where it says there is an error
-        //use comments to narror down where the error is
-        //echo "Hello".$name
-        echo "something else";
-        
-        //RUN TIME ERRORS
-        //only kind"googling" will help
-        $fruits ='apple';
-        sort($fruits); //check documentation for correct usage STRING IS NOT TYPE ARRAY
-        
-        //runtime error
-        //supress runtime errors with @
-        @include('test.php');
-        
-        //valid case for using @
-        if(@include('text.php')){
-            
-        }else{
-            include('default.php');
-        }
-        
-        //or seen like this
-        @include('text.php') or include('default.php');
-        @include('test.php') or die("couldn't find the file");
-        
-        //Logical Errors
-        $gender = 'female';
-        
-        if($gender = "male"){
-            echo "its a boy";
-        }else{
-            echo "its a girl";
-        }
-        
-        //more logic errors
-        set_time_limit(0.001); //Limit how long it runs
-        for($i = 0; $i<=0; $i++){
-            echo"$i<br>";
-            //stop loop if page is taking forever to load
-            //die();
-            //or break will exit
-            //break;
-        }
-        
-        
-        ?>
+        <div class="container">
+            <?php
+            $questions = array(
+                array('questionLabel' => 'First Video Game?', 'answer' => 'B', $possible = array('Mario', 'Pong', 'Chess', 'Lament')),
+                array('questionLabel' => 'First MMO?', 'answer' => 'D', $possible = array('Runescape', 'World of Warcraft', 'Black Desert', 'Ultima Online')),
+            );
+            $possiblitites = array('A', 'B', 'C', 'D');
+
+            foreach ($questions as $i => $question) {
+                echo "<div class='card'><div class='card-block'>";
+                echo "<h2 class='card-title'>" . " " . $question['questionLabel'] . "</h2>";
+                echo "<div class='btn-group' data-toggle='buttons'>";
+                echo $question['answer'] . "<br>";
+
+                foreach ($possiblitites as $i => $poss) {
+                    echo "<label class='btn btn-primary'>";
+                    echo "<br><input type='radio' name='option' id='".$possible[$i]."' autocomplete='off'>".$possiblitites[$i]. " : ".$possible[$i];
+                    echo "</label>";
+                }
+                echo "</div></div></div>";
+            }
+            ?>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     </body>
 </html>

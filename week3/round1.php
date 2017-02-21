@@ -18,7 +18,7 @@
         $apple['weight'] = "10oz";  
         $tracks = array(
             100=>array('name' => 'Night Whitches', 'artist'=>'Sabaton', 'album'=>'Tenthousand Men'),
-            array('name' => 'Fist in the Air', 'artist'=>'Five Finger', 'album'=>'kicking ass', 'album'=>'Bum Touchers'),
+            array('name' => 'Fist in the Air', 'artist'=>'Five Finger', 'album'=>'kicking ass'),
         );
                 $tracks[]=array('name'=>'Don\'t Fear the Reaper', 'artist'=>'Blue Oyster Cult', 'album' => 'albumName');
                 
