@@ -1,7 +1,9 @@
 <!doctype html>
 <?php
-include('includes/header.php');
+$page_title = "My Site | Home";
+
 ?>
+<?php include('includes/header.php'); ?>
   <section>
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
