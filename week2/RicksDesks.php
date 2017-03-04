@@ -146,7 +146,7 @@ This product includes the Zend Engine, freely available at
           <div class='container'>
                <h1 class="text-center">Rick's Desks - Just ask me about my desks.</h1>
                <center>
-               <?php if (!isset($_POST['submit'])or ! $isValid): ?>
+               <?php // if (!isset($_POST['submit'])or ! $isValid): ?>
                     <h1><span class="text-danger"><?= $fillOutForm ?></span></h1>
                     <div class="card">
                          <div class="card-block">
@@ -178,7 +178,7 @@ This product includes the Zend Engine, freely available at
                               </form>
                          </div>
                     </div>
-               <?php endif ?>
+               <?php // endif ?>
                <?php if (isset($_POST['submit']) && $isValid): ?>
                     <table class="table tabel-bordered table-hover table-inverse">
                          <!--                    echo $length . " " . "<br>";

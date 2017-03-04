@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+<!-- 
+/**
+ * Description of Knowledge
+ *
+ * @author Scott Muth <scottdotm.com>
+ */
 -->
 <html>
      <?php
@@ -13,12 +15,38 @@ and open the template in the editor.
           require('Includes/Navbar.php');
           ?>
           <div class="container-fluid" style="padding-top: 100px;">
-               <h1>
-                    Welcome to the history of Videogaming
-               </h1>
-               <p class="lead">
-                    This website will discuss modern video gaming history, however we will touch on the beginnings of the art-form as well. 
-               </p>
+               <div class="row">
+                    <p class="display-3">
+                         Welcome to the History of Video Gaming
+                    </p>
+               </div>
+               <div class="row">
+                    <div class="col">
+                         <p class="lead">
+                              This site will give you a better understanding of
+                              the history of video gaming.
+                         </p>
+                    </div>
+                    <div class="col">
+                         <p class="lead">
+                              The site provides an informative Youtube video on the
+                              Knowledge page. As well as a quiz on the information
+                              gathered from the Youtube video.
+                              <br>
+                              <a href="https://www.youtube.com/watch?v=-I73oK9q-jk">Youtube Video Link</a>
+                              <br>
+                         </p>
+                    </div>
+                    <div class="col">
+                         <p class="lead">
+                              Site was created by Scott Muth as apart of the
+                              web development PHP 1 course at WCTC.
+                              <br>
+                              <br>
+                              March of 2017
+                         </p>
+                    </div>
+               </div>
           </div>
           <?php
           require('Includes/Footer.php');

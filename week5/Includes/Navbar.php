@@ -20,6 +20,6 @@
 
 /**
  * Description of Navbar
- *
+ *   Site-wide navbar
  * @author Scott Muth <scottdotm.com>
  */

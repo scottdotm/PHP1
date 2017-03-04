@@ -9,6 +9,6 @@
 <?php
 /**
  * Description of Footer
- *
+ *   Site-wide footer
  * @author Scott Muth <scottdotm.com>
  */
