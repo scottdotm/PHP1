@@ -8,7 +8,7 @@
 -->
 <html>
      <?php
-     require('Includes/Header.php');
+     require('Includes/Header.html.php');
      ?>
      <body>
           <?php
@@ -61,22 +61,16 @@
                               <div class="carousel-item active">
                                    <img class="d-block img-fluid" src="Assets/Images/children-593313_1280.jpg" alt="First slide">
                                    <div class="carousel-caption d-none d-md-block">
-                                        <h3>First Example Image</h3>
-                                        <p>Images are for development purposes only.</p>
                                    </div>
                               </div>
                               <div class="carousel-item">
                                    <img class="d-block img-fluid" src="Assets/Images/mario-1557240_1280.jpg" alt="Second slide">
                                    <div class="carousel-caption d-none d-md-block">
-                                        <h3>Second Example Image</h3>
-                                        <p>Images are for development purposes only.</p>
                                    </div>
                               </div>
                               <div class="carousel-item">
                                    <img class="d-block img-fluid" src="Assets/Images/video-game-1332694_1280.png" alt="Third slide">
                                    <div class="carousel-caption d-none d-md-block">
-                                        <h3>Third Example Image</h3>
-                                        <p>Images are for development purposes only.</p>
                                    </div>
                               </div>
                          </div>
@@ -92,7 +86,7 @@
                </div>
           </section>
           <?php
-          require('Includes/Footer.php');
+          require('Includes/Footer.html.php');
           require('Includes/Scripts.php');
           ?>
      </body>

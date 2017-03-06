@@ -8,7 +8,7 @@
 -->
 <html>
      <?php
-     require('Includes/Header.php');
+     require('Includes/Header.html.php');
      ?>
      <body>
           <?php
@@ -48,7 +48,7 @@
                </form>
           </section>
           <?php
-          require('Includes/Footer.php');
+          require('Includes/Footer.html.php');
           require('Includes/Scripts.php');
           ?>
      </body>
