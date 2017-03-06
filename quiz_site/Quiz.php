@@ -25,7 +25,9 @@
                <div class="row">
                     <p class="lead">
                          This is a quiz from all the information gathered from watching
-                         the Youtube video in the Knowledge section.
+                         the Youtube video in the Knowledge section. Once taken, click
+                         the submit button on the bottom of the form, then navigate to
+                         the bottom on the page to see your score.
                     </p>
                </div>
                </div>

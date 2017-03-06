@@ -52,9 +52,11 @@ if (isset($_submit)) {
                echo "<h4 class='card-title'>".$quesL . "</h4>";
                if ($solution == $question['answer']) {
                     echo "<p class='card-text'> Correct </p>";
+                    echo "Selected : ".$solution;
                     $counterCorrect++;
                } else {
                     echo "<p class='card-text'> Incorrect </p>";
+                    echo "Selected : ".$solution;
                     $counterIncorrect++;
                }
                // calculate the percentage based on the number correct out of the total number of questions

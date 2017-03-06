@@ -15,7 +15,7 @@
           $pagename = basename(__FILE__, '.php'); 
           require('Includes/Navbar.php');
           ?>
-          <div class="container-fluid" style="padding-top: 100px;">
+          <div class="jumbotron" style="padding-top: 100px;">
                <div class="row">
                     <p class="display-3">
                          Welcome to the History of Video Gaming
@@ -49,6 +49,48 @@
                     </div>
                </div>
           </div>
+          <section id="imgCarousel">
+               <div class="row">
+                    <div id="imgCarouselIndicators" class="carousel slide" data-interval="5000" data-ride="carousel" style="margin:auto;">
+                         <ol class="carousel-indicators">
+                              <li data-target="#imgCarouselIndicators" data-slide-to="0" class="active"></li>
+                              <li data-target="#imgCarouselIndicators" data-slide-to="1"></li>
+                              <li data-target="#imgCarouselIndicators" data-slide-to="2"></li>
+                         </ol>
+                         <div class="carousel-inner" role="listbox">
+                              <div class="carousel-item active">
+                                   <img class="d-block img-fluid" src="Assets/Images/children-593313_1280.jpg" alt="First slide">
+                                   <div class="carousel-caption d-none d-md-block">
+                                        <h3>First Example Image</h3>
+                                        <p>Images are for development purposes only.</p>
+                                   </div>
+                              </div>
+                              <div class="carousel-item">
+                                   <img class="d-block img-fluid" src="Assets/Images/mario-1557240_1280.jpg" alt="Second slide">
+                                   <div class="carousel-caption d-none d-md-block">
+                                        <h3>Second Example Image</h3>
+                                        <p>Images are for development purposes only.</p>
+                                   </div>
+                              </div>
+                              <div class="carousel-item">
+                                   <img class="d-block img-fluid" src="Assets/Images/video-game-1332694_1280.png" alt="Third slide">
+                                   <div class="carousel-caption d-none d-md-block">
+                                        <h3>Third Example Image</h3>
+                                        <p>Images are for development purposes only.</p>
+                                   </div>
+                              </div>
+                         </div>
+                         <a class="carousel-control-prev" href="#imgCarouselIndicators" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                         </a>
+                         <a class="carousel-control-next" href="#imgCarouselIndicators" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                         </a>
+                    </div>
+               </div>
+          </section>
           <?php
           require('Includes/Footer.php');
           require('Includes/Scripts.php');
