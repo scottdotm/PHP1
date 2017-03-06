@@ -2,9 +2,6 @@
      <p class="lead">
           Web Master : ScottDotM
      </p>
-     <p>
-          Linkedin : <a href="https://www.linkedin.com/in/scottdotm/">ScottDotM</a>
-     </p>
 </footer>
 <?php
 /**
