@@ -14,7 +14,7 @@ include('Includes/Filename.php');
                <span class="navbar-toggler-icon"></span>
           </button>
           <a class="navbar-brand page-scroll" href="Index.php">Video Gaming History</a>
-          <div class="collapse navbafr-collapse" id="navbar">
+          <div class="collapse navbar-collapse" id="navbar">
                <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                          <a class="nav-link <?= $_active ?>" href="Knowledge.php">Knowledge <span class="sr-only">(current)</span></a>
