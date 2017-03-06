@@ -8,10 +8,11 @@
 -->
 <html>
      <?php
-     require('Includes/Header.php')
+     require('Includes/Header.php');
      ?>
      <body>
           <?php
+          $pagename = basename(__FILE__, '.php'); 
           require('Includes/Navbar.php');
           ?>
           <section id="body" class="container-fluid" style="padding-top: 100px;">

@@ -12,6 +12,7 @@
      ?>
      <body>
           <?php
+          $pagename = basename(__FILE__, '.php'); 
           require('Includes/Navbar.php');
           ?>
           <div class="container-fluid" style="padding-top: 100px;">

@@ -2,7 +2,7 @@
 
 /**
  * Description of Quiz
- *
+ *   Quiz, validation of quiz, and quiz output.
  * @author Scott Muth <scottdotm.com>
  */
 $questions = array(

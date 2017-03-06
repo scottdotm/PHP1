@@ -2,7 +2,7 @@
 
 /**
  * Description of functions
- *
+ *   Quiz Functions
  * @author Scott Muth <scottdotm.com>
  */
 
